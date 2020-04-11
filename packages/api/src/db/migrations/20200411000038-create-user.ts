@@ -1,7 +1,7 @@
 import { QueryInterface, DataTypes } from 'sequelize';
 
-export async function createTable(q: QueryInterface) {
-  await q.createTable('users', {
+export function up(q: QueryInterface) {
+  return q.createTable('users', {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
