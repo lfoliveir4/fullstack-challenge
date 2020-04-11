@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: fullstackchallenge
+
+    ports:
+      - '5432:5432'
+
+    volumes:
+      - fullstackchallenge
